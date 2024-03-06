@@ -23,3 +23,5 @@ if __name__ == "__main__":
         save_to_json(pull_requests, f"github_data/{repo['name']}_pull_requests.json")
         
         print(f"Pull requests for {repo['name']} saved to {repo['name']}_pull_requests.json")
+
+    
