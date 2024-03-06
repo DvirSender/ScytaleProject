@@ -1,23 +1,26 @@
 import os
 import json
 
-def make_files_directory(dir_name):
-    os.makedirs(dir_name, exist_ok=True)
+
+# Function to create a directory if it doesn't exist
+def create_directory_if_not_exists(directory_name):
+    os.makedirs(directory_name, exist_ok=True)
 
 
-# function to save data to a JSON file
-def save_to_json(data, filename, repo):
+# Function to save data to a JSON file
+def save_data_to_json_file(data, filename, repository):
     try:
         with open(filename, 'w', encoding='utf-8') as file:
             json.dump(data, file, ensure_ascii=False, indent=4)
-        print(f"Pull requests for {repo['name']} saved to {repo['name']}_pull_requests.json")
-    except Exception as e:
-        print("Error in saving data to json:", e)
+        print(f"Pull requests for {repository['name']} saved to {repository['name']}_pull_requests.json")
+    except Exception as error:
+        print("Error in saving data to json:", error)
 
 
-def save_to_parquet(data, filename):
+# Function to save a DataFrame to a Parquet file
+def save_dataframe_to_parquet_file(dataframe, filename):
     try:
-        data.to_parquet(filename)
+        dataframe.to_parquet(filename)
         print(f"Data saved to {filename}")
-    except Exception as e:
-        print("Error in saving data to parquet:", e)
+    except Exception as error:
+        print("Error in saving data to parquet:", error)
