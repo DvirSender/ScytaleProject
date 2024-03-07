@@ -20,9 +20,6 @@ def fetch_all_repositories(organization_name):
         print("Timeout Error:", timeout_error)
 
 
-
-
-
 # Function to fetch all pull requests for a given repository
 def fetch_all_pull_requests(repository_full_name):
     try:
