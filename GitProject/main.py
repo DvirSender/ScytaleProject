@@ -12,8 +12,7 @@ if __name__ == "__main__":
     # Transform the fetched data
     transformed_data = transform_data()
 
-    # Print the transformed data
-    print(transformed_data)
+    # print(transformed_data)
 
     # Create a directory to store the transformed data in parquet format
     create_directory_if_not_exists("parquet_data")

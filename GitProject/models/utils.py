@@ -12,7 +12,6 @@ def save_data_to_json_file(data, filename):
     try:
         with open(filename, 'w', encoding='utf-8') as file:
             json.dump(data, file, ensure_ascii=False, indent=4)
-        # print(f"Pull requests for {repository['name']} saved to {repository['name']}_pull_requests.json")
     except Exception as error:
         print("Error in saving data to json:", error)
 
@@ -21,6 +20,5 @@ def save_data_to_json_file(data, filename):
 def save_dataframe_to_parquet_file(dataframe, filename):
     try:
         dataframe.to_parquet(filename)
-        print(f"Data saved to {filename}")
     except Exception as error:
         print("Error in saving data to parquet:", error)
