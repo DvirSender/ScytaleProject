@@ -1,10 +1,12 @@
 from models.github import interact_with_github_api
 from models.utils import create_directory_if_not_exists, save_dataframe_to_parquet_file
 from models.transform_json import transform_data
+import pandas as pd
+import json
 
 if __name__ == "__main__":
     # Create a directory to store GitHub data
-    create_directory_if_not_exists("github_data")
+    create_directory_if_not_exists("pull_requests_data")
 
     # Interact with GitHub API and fetch data for the organization "Scytale-exercise"
     interact_with_github_api("Scytale-exercise")
