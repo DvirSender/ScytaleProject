@@ -55,10 +55,13 @@ def transform_pr_data(prs):
 
 # Function to transform the data
 def transform_data():
-    repos_name_list = get_files_in_data_directory("repositories_data")
-    repos_data = transform_repos_data(repos_name_list)
-    pr_files_list = get_files_in_data_directory("pull_requests_data")
-    prs_data = transform_pr_data(pr_files_list)
-    final_df = pd.merge(repos_data, prs_data, on='repository_id', how='left')
-    final_df['is_compliant'] = final_df.apply(lambda x: 'Compliant' if x['num_prs'] == x['num_prs_merged'] and "Scytale".lower() in x['repository_owner'].lower() else 'Not Compliant', axis=1)
-    return final_df
+    try:
+        repos_name_list = get_files_in_data_directory("repositories_data")
+        repos_data = transform_repos_data(repos_name_list)
+        pr_files_list = get_files_in_data_directory("pull_requests_data")
+        prs_data = transform_pr_data(pr_files_list)
+        final_df = pd.merge(repos_data, prs_data, on='repository_id', how='left')
+        final_df['is_compliant'] = final_df.apply(lambda x: 'Compliant' if x['num_prs'] == x['num_prs_merged'] and "Scytale".lower() in x['repository_owner'].lower() else 'Not Compliant', axis=1)
+        return final_df
+    except Exception as e:
+        print(f"Error transforming data: {e}")
