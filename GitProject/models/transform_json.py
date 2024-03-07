@@ -14,6 +14,7 @@ def get_files_in_data_directory(dir_name):
     files_list = os.listdir(dir_name)
     return files_list
 
+
 # Function to transform the data of the repositories
 def transform_repos_data(repos):
     res_df = pd.DataFrame()
@@ -31,6 +32,7 @@ def transform_repos_data(repos):
         except Exception as e:
             print(f"Error processing repository {repo}: {e}")
     return res_df
+
 
 # Function to transform the data of the pull requests
 def transform_pr_data(prs):
