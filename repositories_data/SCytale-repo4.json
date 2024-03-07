@@ -97,28 +97,11 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "temp_clone_token": null,
-    "custom_properties": {},
-    "organization": {
-        "login": "Scytale-exercise",
-        "id": 151637554,
-        "node_id": "O_kgDOCQnOMg",
-        "avatar_url": "https://avatars.githubusercontent.com/u/151637554?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Scytale-exercise",
-        "html_url": "https://github.com/Scytale-exercise",
-        "followers_url": "https://api.github.com/users/Scytale-exercise/followers",
-        "following_url": "https://api.github.com/users/Scytale-exercise/following{/other_user}",
-        "gists_url": "https://api.github.com/users/Scytale-exercise/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/Scytale-exercise/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/Scytale-exercise/subscriptions",
-        "organizations_url": "https://api.github.com/users/Scytale-exercise/orgs",
-        "repos_url": "https://api.github.com/users/Scytale-exercise/repos",
-        "events_url": "https://api.github.com/users/Scytale-exercise/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/Scytale-exercise/received_events",
-        "type": "Organization",
-        "site_admin": false
-    },
-    "network_count": 0,
-    "subscribers_count": 0
+    "permissions": {
+        "admin": false,
+        "maintain": false,
+        "push": false,
+        "triage": false,
+        "pull": true
+    }
 }
